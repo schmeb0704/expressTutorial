@@ -1,3 +1,5 @@
+// paste this to app.js and type npm start on the terminal to start
+
 const express = require("express")
 const {people} = require("./data")
 

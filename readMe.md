@@ -24,3 +24,9 @@ Because of this, it is now easier to spin up APIs and web servers
 - .all
 - .use
 - .listen
+
+# Middlewares in Express
+
+## What are Middlewares?
+
+Middlewares are functions that execute during the request to the server. Each middleware has access to req and res objects. Middlewares are everywhere in Express. Literally the heart and soul of Express apps.
