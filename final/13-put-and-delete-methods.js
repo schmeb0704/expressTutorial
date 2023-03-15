@@ -2,13 +2,16 @@ const express = require("express")
 const app = express()
 let {people} = require("./data")
 
+// static assets for root
 app.use(express.static("./methods-public"))
 
+// parse form data
 app.use(express.urlencoded({extended: false}))
 
-app.use(express.json())
+// parse json data
+app.use(express.json()) // handles json data from user
 
-app.get("/api/people", (req, res)=>{
+app.get("/api/people", (req, res)=>{ // .get method is the default for browsers
     res.status(200).json(people)
 })
 
@@ -23,6 +26,7 @@ app.post("/login", (req, res)=>{
 })
 
 app.post("/api/people", (req, res)=>{
+    // console.log(req.body);
     const {name} = req.body
 
     if(!name){
